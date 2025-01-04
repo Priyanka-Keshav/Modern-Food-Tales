@@ -1,0 +1,7 @@
+backend/
+├── models/         # For Mongoose models
+├── routes/         # For API routes
+├── controllers/    # For handling route logic
+├── config/         # For database and other configurations
+├── index.js        # Main server file
+└── .env            # Environment variables file
