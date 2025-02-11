@@ -7,11 +7,14 @@ function SignUpfun() {
   const navigate = useNavigate();
   const signUp = async () => {
     try {
-      const response = await fetch("http://localhost:5000/user/create/", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email_id: email, password: password }),
-      });
+      const response = await fetch(
+        "https://food-blogging-website-hjc8.onrender.com/user/create/",
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ email_id: email, password: password }),
+        }
+      );
       const data = await response.json();
       console.log(data);
       if (response.ok) {

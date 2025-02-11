@@ -18,7 +18,7 @@ function Favorites() {
   const display = async () => {
     try {
       const response = await fetch(
-        `http://localhost:5000/blog/user/${User_id}`
+        `https://food-blogging-website-hjc8.onrender.com/blog/user/${User_id}`
       );
       const array = await response.json();
       setResult(array);
@@ -40,7 +40,7 @@ function Favorites() {
   const delete_recipe = async (recipe) => {
     try {
       const response = await fetch(
-        `http://localhost:5000/Blog/delete/${recipe._id}`,
+        `https://food-blogging-website-hjc8.onrender.com/Blog/delete/${recipe._id}`,
         { method: "DELETE" }
       );
       if (response.ok) {

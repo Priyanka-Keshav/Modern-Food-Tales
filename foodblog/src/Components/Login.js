@@ -26,11 +26,14 @@ function Login() {
   };
   const user_login = async () => {
     try {
-      const response = await fetch("http://localhost:5000/user/login/", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email_id: email, password: password }),
-      });
+      const response = await fetch(
+        "https://food-blogging-website-hjc8.onrender.com/user/login/",
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ email_id: email, password: password }),
+        }
+      );
 
       if (response.ok) {
         Swal.fire({

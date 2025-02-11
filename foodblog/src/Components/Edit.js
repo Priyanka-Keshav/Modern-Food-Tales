@@ -9,7 +9,9 @@ function EditRecipe() {
     // Fetch the recipe data using the id from the URL
     const fetchRecipe = async () => {
       try {
-        const response = await fetch(`http://localhost:5000/Blog/${id}`);
+        const response = await fetch(
+          `https://food-blogging-website-hjc8.onrender.com/Blog/${id}`
+        );
         const data = await response.json();
         setRecipe(data);
       } catch (error) {
@@ -23,13 +25,16 @@ function EditRecipe() {
   const handleUpdate = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch(`http://localhost:5000/Blog/update/${id}`, {
-        method: "PUT",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(recipe),
-      });
+      const response = await fetch(
+        `https://food-blogging-website-hjc8.onrender.com/Blog/update/${id}`,
+        {
+          method: "PUT",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(recipe),
+        }
+      );
 
       if (response.ok) {
         alert("Recipe updated successfully");
