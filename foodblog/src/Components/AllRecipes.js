@@ -15,7 +15,7 @@ function AllRecipes() {
   const display = async () => {
     try {
       const response = await fetch(
-        "https://food-blogging-website-hjc8.onrender.com/blog/all/"
+        "https://food-blogging-website-backend.onrender.com/blog/all/"
       );
       const array = await response.json();
       setResult(array);

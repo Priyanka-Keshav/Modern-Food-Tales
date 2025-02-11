@@ -29,7 +29,7 @@ function CreateBlogs() {
   const create_Blog = async () => {
     try {
       const response = await fetch(
-        "https://food-blogging-website-hjc8.onrender.com/Blog/create/",
+        "https://food-blogging-website-backend.onrender.com/Blog/create/",
         {
           method: "POST",
           headers: {

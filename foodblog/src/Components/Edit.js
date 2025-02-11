@@ -10,7 +10,7 @@ function EditRecipe() {
     const fetchRecipe = async () => {
       try {
         const response = await fetch(
-          `https://food-blogging-website-hjc8.onrender.com/Blog/${id}`
+          `https://food-blogging-website-backend.onrender.com/Blog/${id}`
         );
         const data = await response.json();
         setRecipe(data);
@@ -26,7 +26,7 @@ function EditRecipe() {
     e.preventDefault();
     try {
       const response = await fetch(
-        `https://food-blogging-website-hjc8.onrender.com/Blog/update/${id}`,
+        `https://food-blogging-website-backend.onrender.com/Blog/update/${id}`,
         {
           method: "PUT",
           headers: {
