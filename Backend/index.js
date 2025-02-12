@@ -4,7 +4,11 @@ const connectDB = require("./Config/Food");
 const cors = require("cors");
 
 // Middleware to handle CORS
-app.use(cors({ origin: "http://localhost:3000" })); // You can change this for production
+app.use(cors({ 
+  origin: ["http://localhost:3000", "https://modern-food-tales.netlify.app"], 
+  credentials: true 
+}));
+ // You can change this for production
 
 // Middleware to parse JSON bodies
 app.use(express.json());
